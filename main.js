@@ -19,11 +19,14 @@ $btnCal.click(()=>{
   if(validate($width,$widthValidate)&&validate($height,$heightValidate)){
 
   //calc
-let p=(w+h)*2,
-    a=w*h;
+//let p=(w+h)*2,
+ //   a=w*h;
+ 
+    var rect=rectangle();
+ 
   //output
-$perimeter.val(p);
-$area.val(a);
+$perimeter.val(rect.perimeter(w,h));
+$area.val(rect.area(w,h));
 
 
   }
